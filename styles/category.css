@@ -1,0 +1,252 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --background-color: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.logo img{
+padding-top: 5px;
+    height: 200px;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.category-header {
+    background:linear-gradient(45deg, rgba(26, 41, 128, 0.8),rgba(38, 208, 206, 0.80),rgba(106, 17, 203, 0.8));
+   background-size: 400% 400%;
+    color: white;
+    text-align: center;
+    padding: 40px 5%;
+    animation: liquidMove 10s ease infinite;
+}
+
+@keyframes liquidMove{
+    0%{
+        background-position:0% 50% ;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.category-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.category-header p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+.article-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+.article-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article-content h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.article-content p {
+    color: #666;
+}
+
+.featured-article {
+    grid-column: span 2;
+}
+
+.featured-article img {
+    height: 400px;
+}
+
+.trending-sidebar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.trending-list {
+    list-style-type: none;
+}
+
+.trending-list li {
+    border-bottom: 1px solid var(--background-color);
+    padding: 10px 0;
+}
+
+.trending-list li:last-child {
+    border-bottom: none;
+}
+
+.site-footer {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center    ;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.newsletter-signup {
+    display: flex;
+}
+
+.newsletter-signup input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+}
+
+.newsletter-signup button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-legal a {
+    color: #ffffff;
+    margin-left: 15px;
+    text-decoration: none;
+}

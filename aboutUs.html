@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us & Contact - The Daily Pulse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/aboutUs.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">NEWSIFY</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="general.html">General</a></li>
+                <li><a href="politics..html">Politics</a></li>
+                <li><a href="tech.html">Technology</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <main>
+            <section class="about-section">
+                <h1>About Newsify</h1>
+                <h2 style="margin-top: 20px; color: var(--accent-color);">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://picsum.photos/200/200?random=1" alt="Sarah Johnson">
+                        <h3>Me</h3>
+                        <p>Editor-in-Chief</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://picsum.photos/200/200?random=2" alt="Michael Chen">
+                        <h3>Myself</h3>
+                        <p>Technology Editor</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://picsum.photos/200/200?random=3" alt="Emily Rodriguez">
+                        <h3>And I</h3>
+                        <p>Global News Director</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h1>Contact Us</h1>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="user_name" placeholder="Your Name" required>
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Send the email
+            emailjs.sendForm('service_hnpwnwh', 'template_8er593l', this)
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    alert('Failed to send your message. Please try again later.');
+                });
+        });
+    </script>
+</body>
+</html>

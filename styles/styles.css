@@ -1,0 +1,103 @@
+body{
+    margin :0;
+    padding:0;
+    height:100vh;
+    font-family: sans-serif;
+    background: linear-gradient(60deg, rgba(18, 78, 243, 0.829), rgba(144, 192, 238, 0.712)) ;
+}
+p{
+    color:black;
+    font-size: 0.9rem;
+}
+a{
+    color:blue;
+    cursor: pointer;
+}
+
+.container {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    width:70%;
+    max-width: 600px;
+    height :90%;
+    margin:1em 2em;
+    justify-self: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgba(144, 192, 238, 0.712);
+    border-radius: 1em;
+}
+
+.signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height :50%;
+    width: 100%;
+    padding-right: 5%;
+    padding-top: 7%;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height :50%;
+    width: 100%;
+    
+}
+
+.image{
+    height:50%;
+    width: 100%;
+    position: absolute;
+    top:50%;
+    transition: transform 0.5s ease;
+}
+.image img{
+    height: 100%;
+    width:100%;
+    border-radius: 0.3em;
+}
+
+/* General Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    padding: 1em;
+    color: white;
+}
+
+.form h2 {
+    color:white;
+    margin-bottom: 1em;
+}
+
+.form input {
+    width: 80%;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 85%;
+    padding: 0.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(69, 69, 221);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form button:hover {
+    background-color: lightgray;
+}
